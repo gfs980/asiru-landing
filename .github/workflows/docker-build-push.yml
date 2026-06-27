@@ -1,7 +1,7 @@
 # Build asiru-landing Docker image, upload it to the server, then deploy with docker compose.
 # No registry: image is built on the runner, saved to a tar, copied to the server via SCP, loaded there.
 # Required secrets: SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
-# Optional: SERVER_APP_DIR (default: /var/www/religion-rent)
+# Optional: SERVER_APP_DIR (default: /var/www/asiru)
 #
 # Repo root is the web app (this directory). Build context = . so COPY in Dockerfile gets package.json etc.
 
@@ -15,6 +15,8 @@ on:
 env:
   IMAGE_NAME: asiru-landing
   IMAGE_TAG: latest
+  CRM_DIR: /var/www/asiru
+  TAR_FILE: asiru-landing.tar.gz
 
 jobs:
   build-and-deploy:
@@ -43,8 +45,8 @@ jobs:
 
       - name: Save image to tar
         run: |
-          docker save ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} | gzip > asiru-landing.tar.gz
-          ls -la asiru-landing.tar.gz
+          docker save ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} | gzip > ${{ env.TAR_FILE }}
+          ls -la ${{ env.TAR_FILE }}
 
       - name: Copy image to server
         uses: appleboy/scp-action@v0.1.7
@@ -52,8 +54,8 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "asiru-landing.tar.gz"
-          target: "/tmp/"
+          source: ${{ env.TAR_FILE }}
+          target: ${{ env.CRM_DIR }}
 
       - name: Load image and deploy on server
         uses: appleboy/ssh-action@v1.0.3
@@ -63,10 +65,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            APP_DIR="${{ secrets.SERVER_APP_DIR || '/var/www/asiru' }}"
-            echo "Loading image and deploying in $APP_DIR ..."
-            gunzip -c /tmp/asiru-landing.tar.gz | docker load
-            rm -f /tmp/asiru-landing.tar.gz
+            APP_DIR="${{ env.CRM_DIR }}"
+            TAR_FILE="${{ env.TAR_FILE }}"
+            echo "Loading motos-cms image and deploying in $APP_DIR ..."
+            gunzip -c "${APP_DIR}/${TAR_FILE}" | docker load
+            rm -f "${APP_DIR}/${TAR_FILE}"
             cd "$APP_DIR"
             docker compose up -d asiru-landing
             docker image prune -f
