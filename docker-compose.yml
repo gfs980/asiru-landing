@@ -1,7 +1,6 @@
 services:
   asiru-landing:
     image: asiru-landing:latest
-    restart: unless-stopped
     ports:
       - "3068:3000"
     environment:
