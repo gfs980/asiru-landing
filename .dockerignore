@@ -1,0 +1,33 @@
+# dependencies
+node_modules
+npm-debug.log*
+
+# build output
+.next
+out
+dist
+
+# git & IDE
+.git
+.gitignore
+.cursor
+.vscode
+.idea
+
+# env (inject at runtime)
+.env
+.env.*
+!.env.example
+
+# docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# docs & design artifacts
+*.md
+design-system
+
+# tests / misc
+coverage
+.DS_Store

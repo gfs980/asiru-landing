@@ -3,7 +3,7 @@ import { LandingPage } from "@/components/landing-page";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const dict = await getDictionary("en");
+  const dict = await getDictionary("ru");
   return {
     title: dict.meta.title,
     description: dict.meta.description,
@@ -20,6 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function HomePage() {
-  return <LandingPage locale="en" />;
+export default function RuHomePage() {
+  return <LandingPage locale="ru" />;
 }

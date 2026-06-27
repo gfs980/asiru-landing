@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "title": "Asiru — Cross-Border Payments & Ruble Acceptance in Southeast Asia",
+    "description": "Asiru helps businesses accept rubles from Russian clients and settle in local currency. Regulated infrastructure, transparent rates, settlement in minutes."
+  },
+  "nav": {
+    "product": "Product",
+    "howItWorks": "How it works",
+    "forBusiness": "For business",
+    "cases": "Cases",
+    "faq": "FAQ",
+    "calculator": "Calculator",
+    "contact": "Contact",
+    "cta": "Get started"
+  },
+  "hero": {
+    "badge": "Regulated cross-border infrastructure",
+    "title": "Accept rubles.",
+    "titleAccent": "Settle globally.",
+    "subtitle": "Asiru connects Russian payers with businesses across Thailand and Southeast Asia — legal, transparent, and built for scale.",
+    "ctaPrimary": "Start accepting ₽",
+    "ctaSecondary": "Try the demo",
+    "stats": [
+      { "value": "24h", "label": "Average settlement" },
+      { "value": "0.5%", "label": "From commission" },
+      { "value": "15+", "label": "Years in payments" }
+    ],
+    "demo": {
+      "steps": ["Invoice", "QR Pay", "Process", "Settled"],
+      "dashboard": "Merchant dashboard",
+      "live": "Live demo",
+      "invoiceLabel": "Amount to receive",
+      "rateLock": "Client pays ₽ 385,000 · Rate locked 15 min",
+      "generateQr": "Generate payment QR",
+      "clientPays": "Client pays via Russian bank app (SBP)",
+      "simulatePay": "Simulate client payment",
+      "processing": "Processing cross-border payment",
+      "processSteps": [
+        "RUB received via SBP",
+        "FX conversion at locked rate",
+        "Compliance check passed",
+        "THB payout queued"
+      ],
+      "confirmed": "Payment confirmed",
+      "credited": "Credited to your Thai bank account",
+      "replay": "Watch again",
+      "hint": "Click steps above or let the demo auto-play"
+    }
+  },
+  "socialProof": {
+    "rating": "4.9",
+    "ratingLabel": "from 100+ reviews",
+    "ratingSubtext": "Trusted by hospitality, real estate, and service businesses across Southeast Asia",
+    "metrics": [
+      { "count": 10000, "suffix": "+", "label": "Deals completed" },
+      { "value": "24h", "label": "Avg. settlement" },
+      { "count": 15, "suffix": "+", "label": "Years in payments" }
+    ],
+    "logos": [
+      "Bangkok Hospitality Group",
+      "Phuket Property Partners",
+      "Samui Wellness Clinics",
+      "Pattaya Auto Rentals",
+      "Chiang Mai Travel Co.",
+      "Hua Hin Resort Collection",
+      "Bali Expat Services",
+      "Singapore Trade Desk"
+    ],
+    "testimonials": [
+      {
+        "name": "Marina K.",
+        "role": "Hotel owner, Phuket",
+        "quote": "Russian guests finally pay by QR in rubles. We receive baht the same day — no more awkward wire workarounds."
+      },
+      {
+        "name": "Dmitry V.",
+        "role": "Real estate agency, Bangkok",
+        "quote": "Asiru closed a ฿12M property deposit in under 24 hours. Transparent rate, full documentation for compliance."
+      },
+      {
+        "name": "Elena S.",
+        "role": "Medical clinic director",
+        "quote": "Our patients pay treatment packages from Russia in one tap. Setup took one day. Support is genuinely excellent."
+      }
+    ]
+  },
+  "liveTicker": {
+    "label": "Live settlements",
+    "items": [
+      { "text": "฿124,500 settled · Phuket hospitality", "time": "2m ago" },
+      { "text": "₽ 8.2M received via SBP · Bangkok property", "time": "6m ago" },
+      { "text": "฿680,000 treatment package · Samui clinic", "time": "11m ago" },
+      { "text": "฿42,300 restaurant group · Pattaya", "time": "18m ago" },
+      { "text": "₽ 2.1M FX locked · Hua Hin resort", "time": "24m ago" }
+    ]
+  },
+  "trust": {
+    "title": "Trusted by businesses serving Russian clients",
+    "items": [
+      "Licensed payment infrastructure",
+      "No P2P or grey schemes",
+      "Transparent FX rates",
+      "Compliance-first operations"
+    ]
+  },
+  "problems": {
+    "title": "The cross-border payment gap",
+    "subtitle": "Russian clients want to pay in rubles. Most international businesses still can't accept them — legally.",
+    "items": [
+      {
+        "title": "Lost revenue",
+        "description": "Clients from Russia can't pay with familiar methods. Deals stall before they even begin."
+      },
+      {
+        "title": "Grey-scheme risks",
+        "description": "P2P transfers and informal channels create chargebacks, blocks, and regulatory exposure."
+      },
+      {
+        "title": "Asiru solves it",
+        "description": "Regulated ruble acceptance with payout in THB, USD, or your local currency — no workarounds."
+      }
+    ]
+  },
+  "calculator": {
+    "title": "Calculate your cross-border payment",
+    "subtitle": "See exactly what your client pays in rubles and what you receive in baht — fees included, rate locked for 15 minutes.",
+    "receiveLabel": "You receive (THB)",
+    "clientPaysLabel": "Client pays (RUB)",
+    "rateLock": "Rate locked",
+    "refresh": "Refresh",
+    "swap": "Swap currencies",
+    "liveRate": "Live rate",
+    "feeLabel": "Asiru fee",
+    "youReceive": "You receive",
+    "disclaimer": "Indicative quote. Final amount confirmed at invoice creation.",
+    "cta": "Get this rate",
+    "source": "Rate source",
+    "error": "Unable to load exchange rate. Please try again."
+  },
+  "flow": {
+    "title": "One bridge between Russia and the world",
+    "subtitle": "From invoice to settlement — a single regulated path",
+    "steps": [
+      { "label": "Clients from Russia", "detail": "Pay in RUB via bank transfer or SBP" },
+      { "label": "Asiru processing", "detail": "Compliance · FX · Settlement" },
+      { "label": "Your business", "detail": "Receive THB, USD, or local currency" }
+    ]
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "From invoice to payout in minutes",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Create an invoice",
+        "description": "Set the amount in your currency. Asiru generates a payment link or QR code instantly."
+      },
+      {
+        "step": "02",
+        "title": "Client pays in rubles",
+        "description": "Your customer pays in RUB through their Russian bank app — fast, familiar, secure."
+      },
+      {
+        "step": "03",
+        "title": "You receive settlement",
+        "description": "Funds convert and settle to your account in THB, USD, or local currency — on schedule."
+      },
+      {
+        "step": "04",
+        "title": "Full transparency",
+        "description": "Track every transaction in your dashboard. Export reports for accounting and compliance."
+      }
+    ]
+  },
+  "caseStudies": {
+    "title": "Real deals, real outcomes",
+    "subtitle": "How businesses across Southeast Asia close cross-border payments with Russian clients — in hours, not weeks.",
+    "problemLabel": "Challenge",
+    "solutionLabel": "How Asiru helped",
+    "resultLabel": "Outcome",
+    "prev": "Previous case",
+    "next": "Next case",
+    "goToCase": "Go to case",
+    "cta": "Discuss your case",
+    "items": [
+      {
+        "id": "hotel",
+        "category": "Hospitality",
+        "title": "Luxury villa deposit from Moscow",
+        "problem": "A Phuket resort needed a ฿850,000 booking deposit from a Russian guest. International cards failed and P2P transfers were rejected by compliance.",
+        "solution": "Asiru issued a QR invoice in minutes. The guest paid in rubles via SBP from their Russian banking app — no cards, no informal channels.",
+        "result": "Deposit settled to the resort's Thai account the same evening. The booking was confirmed without losing the peak-season slot.",
+        "metric": "4h",
+        "metricLabel": "Booking secured"
+      },
+      {
+        "id": "property",
+        "category": "Real estate",
+        "title": "฿12M condo down payment",
+        "problem": "A Bangkok agency had 48 hours to receive a down payment from buyers in Russia. SWIFT was blocked and alternative brokers quoted unfavorable rates.",
+        "solution": "We fixed the FX rate for 15 minutes, generated a compliant payment path, and provided full documentation for the agency's legal team.",
+        "result": "Full down payment received within the contract window. Deal registered on schedule with transparent audit trail.",
+        "metric": "22h",
+        "metricLabel": "Deal closed"
+      },
+      {
+        "id": "restaurant",
+        "category": "F&B",
+        "title": "High-season restaurant group payments",
+        "problem": "A restaurant group in Samui couldn't accept rubles from tour groups. Cash-only workarounds hurt revenue and created compliance risk.",
+        "solution": "Each location got QR codes in the dashboard. Tour leaders paid group bills in RUB; settlements hit one THB account per venue.",
+        "result": "Russian tourist spend increased 34% in one season. No POS hardware, no chargebacks.",
+        "metric": "34%",
+        "metricLabel": "Revenue uplift"
+      },
+      {
+        "id": "medical",
+        "category": "Healthcare",
+        "title": "Treatment package from St. Petersburg",
+        "problem": "A wellness clinic needed upfront payment for a ฿680,000 program. The patient's Russian bank refused an international transfer to Thailand.",
+        "solution": "Clinic staff created an invoice in THB. Patient scanned QR and paid in RUB with a locked rate shown on screen before confirming.",
+        "result": "Treatment started on the planned date. Clinic received exact THB amount with fee breakdown for accounting.",
+        "metric": "18 min",
+        "metricLabel": "Payment confirmed"
+      }
+    ]
+  },
+  "statementBand": {
+    "quote": "Cross-border payments shouldn't feel like a compromise.",
+    "highlightCount": 10000,
+    "highlightSuffix": "+",
+    "highlightLabel": "deals completed across Southeast Asia",
+    "cta": "Start accepting rubles",
+    "footnote": "Licensed infrastructure · Full audit trail"
+  },
+  "audience": {
+    "title": "Built for businesses with Russian clients",
+    "subtitle": "If your guests, buyers, or partners want to pay in rubles — Asiru makes it effortless.",
+    "segments": [
+      { "title": "Hotels & hospitality", "description": "Deposits, bookings, and on-property payments" },
+      { "title": "Real estate", "description": "Property purchases, rentals, and agency fees" },
+      { "title": "Restaurants & retail", "description": "QR payments without POS hardware" },
+      { "title": "Medical & wellness", "description": "Treatment packages and clinic services" },
+      { "title": "Auto & transport", "description": "Rentals, transfers, and deposits" },
+      { "title": "Travel & experiences", "description": "Tours, excursions, and concierge services" }
+    ]
+  },
+  "features": {
+    "title": "Why businesses choose Asiru",
+    "subtitle": "Everything you need to accept rubles — without the operational headache.",
+    "items": [
+      {
+        "title": "No POS required",
+        "description": "Generate QR codes and payment links from your dashboard. Works anywhere in the world."
+      },
+      {
+        "title": "Transparent pricing",
+        "description": "All fees included in the rate. No hidden charges after the client pays."
+      },
+      {
+        "title": "Fast settlement",
+        "description": "From payment to payout in minutes — not days of bank clearing."
+      },
+      {
+        "title": "Business dashboard",
+        "description": "Balances, roles, transaction history, and CSV export for your team."
+      },
+      {
+        "title": "Flexible payouts",
+        "description": "Receive THB, USD, or other supported currencies on your terms."
+      },
+      {
+        "title": "Dedicated support",
+        "description": "Personal onboarding and a manager who understands cross-border payments."
+      }
+    ]
+  },
+  "about": {
+    "title": "More than a payment agent",
+    "description": "Asiru is an international fintech team building regulated payment infrastructure between Russia and Southeast Asia. We operate within legal frameworks, with licensed partners and transparent processes — so your business can grow without payment friction.",
+    "highlights": [
+      "Proprietary payment architecture",
+      "Financial licenses across jurisdictions",
+      "100% transparent tariffs",
+      "Personal support at every stage"
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "How long does onboarding take?",
+        "answer": "Most businesses are onboarded within 24 hours after submitting documents. Sign the agreement, provide company details, and start accepting rubles the next day."
+      },
+      {
+        "question": "How does the client pay?",
+        "answer": "Clients scan a QR code or open a payment link in their Russian banking app. Payment goes through regulated bank channels — no cards or informal transfers required."
+      },
+      {
+        "question": "What currency do I receive?",
+        "answer": "You receive funds in Thai Baht (THB) or USD to your local bank account, depending on your setup. The client always sees a clear amount in rubles."
+      },
+      {
+        "question": "Are there hidden fees?",
+        "answer": "No. The exchange rate shown at invoice creation includes all fees. You receive exactly the amount you specified in your currency."
+      },
+      {
+        "question": "Is it safe and compliant?",
+        "answer": "Yes. All payments flow through licensed banking partners and regulated infrastructure. We maintain full compliance with applicable financial regulations."
+      },
+      {
+        "question": "Who is Asiru for?",
+        "answer": "Any business in Thailand or Southeast Asia that serves Russian clients — hospitality, real estate, retail, medical, travel, and more."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start accepting rubles tomorrow",
+    "subtitle": "Connect in 24 hours. No setup fees. Transparent rates from day one.",
+    "button": "Request a consultation",
+    "emailPlaceholder": "you@company.com",
+    "note": "By submitting, you agree to our privacy policy."
+  },
+  "presentation": {
+    "scrollHint": "Scroll to continue",
+    "stepLabel": "Step",
+    "stickyCtaTitle": "Ready to accept rubles?",
+    "stickyCtaSubtitle": "Onboard in 24 hours · 0.5% from"
+  },
+  "compliance": {
+    "badges": [
+      "Licensed payment infrastructure",
+      "AML / KYC compliant",
+      "No P2P or grey schemes",
+      "Regulated bank partners",
+      "Full audit trail",
+      "PCI-aligned processing"
+    ]
+  },
+  "comparison": {
+    "title": "Asiru vs banks vs grey schemes",
+    "subtitle": "See why regulated infrastructure beats workarounds.",
+    "featureHeader": "Capability",
+    "columns": {
+      "asiru": "Asiru",
+      "banks": "Banks / SWIFT",
+      "grey": "P2P / Grey"
+    },
+    "rows": [
+      {
+        "feature": "Accept rubles via SBP",
+        "asiru": "yes",
+        "banks": "no",
+        "grey": "partial"
+      },
+      {
+        "feature": "Settlement in THB / USD",
+        "asiru": "yes",
+        "banks": "partial",
+        "grey": "no"
+      },
+      {
+        "feature": "Licensed & compliant",
+        "asiru": "yes",
+        "banks": "yes",
+        "grey": "no"
+      },
+      {
+        "feature": "Transparent all-in rate",
+        "asiru": "yes",
+        "banks": "no",
+        "grey": "no"
+      },
+      {
+        "feature": "Settlement under 24h",
+        "asiru": "yes",
+        "banks": "no",
+        "grey": "partial"
+      },
+      {
+        "feature": "No chargeback / block risk",
+        "asiru": "yes",
+        "banks": "yes",
+        "grey": "no"
+      },
+      {
+        "feature": "Business dashboard & reports",
+        "asiru": "yes",
+        "banks": "partial",
+        "grey": "no"
+      }
+    ],
+    "cta": "Choose the regulated path"
+  },
+  "footer": {
+    "tagline": "Cross-border payments, reimagined.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "rights": "© 2026 Asiru. All rights reserved."
+  }
+}

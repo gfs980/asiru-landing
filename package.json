@@ -6,9 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:lottie": "node scripts/generate-payment-lottie.mjs",
+    "docker:build": "docker build -t asiru-landing:latest .",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down"
   },
   "dependencies": {
+    "framer-motion": "^12.42.0",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^1.21.0",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"

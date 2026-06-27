@@ -1,0 +1,73 @@
+# Build asiru-landing Docker image, upload it to the server, then deploy with docker compose.
+# No registry: image is built on the runner, saved to a tar, copied to the server via SCP, loaded there.
+# Required secrets: SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
+# Optional: SERVER_APP_DIR (default: /var/www/religion-rent)
+#
+# Repo root is the web app (this directory). Build context = . so COPY in Dockerfile gets package.json etc.
+
+name: Build and deploy to server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: asiru-landing
+  IMAGE_TAG: latest
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image (load into runner, no registry)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          push: false
+          load: true
+          tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Save image to tar
+        run: |
+          docker save ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} | gzip > asiru-landing.tar.gz
+          ls -la asiru-landing.tar.gz
+
+      - name: Copy image to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "asiru-landing.tar.gz"
+          target: "/tmp/"
+
+      - name: Load image and deploy on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            APP_DIR="${{ secrets.SERVER_APP_DIR || '/var/www/asiru' }}"
+            echo "Loading image and deploying in $APP_DIR ..."
+            gunzip -c /tmp/asiru-landing.tar.gz | docker load
+            rm -f /tmp/asiru-landing.tar.gz
+            cd "$APP_DIR"
+            docker compose up -d asiru-landing
+            docker image prune -f
+            echo "Done."
