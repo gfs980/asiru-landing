@@ -128,7 +128,11 @@ function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
       {locales.map((loc) => (
         <Link
           key={loc}
-          href={getLocalizedPath("home", loc)}
+          href={
+            loc === currentLocale
+              ? getLocalizedPath("home", loc)
+              : `${getLocalizedPath("home", loc)}?lang=${loc}`
+          }
           className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium uppercase transition-colors ${
             loc === currentLocale
               ? "bg-primary text-white"
