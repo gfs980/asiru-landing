@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import { getLocalizedPath, type Locale } from "@/lib/i18n/routes";
@@ -9,11 +10,8 @@ type FooterProps = {
 
 export function Footer({ dict, locale }: FooterProps) {
   const navLinks = [
-    { href: "#product", label: dict.nav.product },
     { href: "#how-it-works", label: dict.nav.howItWorks },
-    { href: "#for-business", label: dict.nav.forBusiness },
-    { href: "#cases", label: dict.nav.cases },
-    { href: "#calculator", label: dict.nav.calculator },
+    { href: "#why", label: dict.nav.whyAsiru },
     { href: "#faq", label: dict.nav.faq },
     { href: "#contact", label: dict.nav.contact },
   ];
@@ -25,12 +23,16 @@ export function Footer({ dict, locale }: FooterProps) {
           <div>
             <Link
               href={getLocalizedPath("home", locale)}
-              className="flex items-center gap-2 text-lg font-semibold"
+              className="flex items-center"
+              aria-label="Asiru"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white">
-                A
-              </span>
-              Asiru
+              <Image
+                src="/logo.png"
+                alt="Asiru"
+                width={900}
+                height={209}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               {dict.footer.tagline}

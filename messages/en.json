@@ -1,11 +1,12 @@
 {
   "meta": {
-    "title": "Asiru — Cross-Border Payments & Ruble Acceptance in Southeast Asia",
+    "title": "Asiru - Cross-Border Payments & Ruble Acceptance in Southeast Asia",
     "description": "Asiru helps businesses accept rubles from Russian clients and settle in local currency. Regulated infrastructure, transparent rates, settlement in minutes."
   },
   "nav": {
     "product": "Product",
     "howItWorks": "How it works",
+    "whyAsiru": "Why ASIRU",
     "forBusiness": "For business",
     "cases": "Cases",
     "faq": "FAQ",
@@ -14,17 +15,27 @@
     "cta": "Get started"
   },
   "hero": {
-    "badge": "Regulated cross-border infrastructure",
-    "title": "Accept rubles.",
-    "titleAccent": "Settle globally.",
-    "subtitle": "Asiru connects Russian payers with businesses across Thailand and Southeast Asia — legal, transparent, and built for scale.",
-    "ctaPrimary": "Start accepting ₽",
-    "ctaSecondary": "Try the demo",
-    "stats": [
-      { "value": "24h", "label": "Average settlement" },
-      { "value": "0.5%", "label": "From commission" },
-      { "value": "15+", "label": "Years in payments" }
+    "title": "International real estate transactions - secure and profitable",
+    "subtitle": "ASIRU is fintech infrastructure for developers and real estate agencies working with Russian buyers.",
+    "features": [
+      {
+        "icon": "shield",
+        "text": "Fund protection via Russian bank letter of credit"
+      },
+      {
+        "icon": "globe",
+        "text": "Optimal terms for international settlements"
+      },
+      {
+        "icon": "legal",
+        "text": "Legal support throughout the transaction"
+      },
+      {
+        "icon": "coordinator",
+        "text": "One coordinator at every stage"
+      }
     ],
+    "ctaPrimary": "Become a partner",
     "demo": {
       "steps": ["Invoice", "QR Pay", "Process", "Settled"],
       "dashboard": "Merchant dashboard",
@@ -70,7 +81,7 @@
       {
         "name": "Marina K.",
         "role": "Hotel owner, Phuket",
-        "quote": "Russian guests finally pay by QR in rubles. We receive baht the same day — no more awkward wire workarounds."
+        "quote": "Russian guests finally pay by QR in rubles. We receive baht the same day - no more awkward wire workarounds."
       },
       {
         "name": "Dmitry V.",
@@ -88,8 +99,14 @@
     "label": "Live settlements",
     "items": [
       { "text": "฿124,500 settled · Phuket hospitality", "time": "2m ago" },
-      { "text": "₽ 8.2M received via SBP · Bangkok property", "time": "6m ago" },
-      { "text": "฿680,000 treatment package · Samui clinic", "time": "11m ago" },
+      {
+        "text": "₽ 8.2M received via SBP · Bangkok property",
+        "time": "6m ago"
+      },
+      {
+        "text": "฿680,000 treatment package · Samui clinic",
+        "time": "11m ago"
+      },
       { "text": "฿42,300 restaurant group · Pattaya", "time": "18m ago" },
       { "text": "₽ 2.1M FX locked · Hua Hin resort", "time": "24m ago" }
     ]
@@ -105,7 +122,7 @@
   },
   "problems": {
     "title": "The cross-border payment gap",
-    "subtitle": "Russian clients want to pay in rubles. Most international businesses still can't accept them — legally.",
+    "subtitle": "Russian clients want to pay in rubles. Most international businesses still can't accept them - legally.",
     "items": [
       {
         "title": "Lost revenue",
@@ -117,13 +134,13 @@
       },
       {
         "title": "Asiru solves it",
-        "description": "Regulated ruble acceptance with payout in THB, USD, or your local currency — no workarounds."
+        "description": "Regulated ruble acceptance with payout in THB, USD, or your local currency - no workarounds."
       }
     ]
   },
   "calculator": {
     "title": "Calculate your cross-border payment",
-    "subtitle": "See exactly what your client pays in rubles and what you receive in baht — fees included, rate locked for 15 minutes.",
+    "subtitle": "See exactly what your client pays in rubles and what you receive in baht - fees included, rate locked for 15 minutes.",
     "receiveLabel": "You receive (THB)",
     "clientPaysLabel": "Client pays (RUB)",
     "rateLock": "Rate locked",
@@ -139,42 +156,81 @@
   },
   "flow": {
     "title": "One bridge between Russia and the world",
-    "subtitle": "From invoice to settlement — a single regulated path",
+    "subtitle": "From invoice to settlement - a single regulated path",
     "steps": [
-      { "label": "Clients from Russia", "detail": "Pay in RUB via bank transfer or SBP" },
+      {
+        "label": "Clients from Russia",
+        "detail": "Pay in RUB via bank transfer or SBP"
+      },
       { "label": "Asiru processing", "detail": "Compliance · FX · Settlement" },
-      { "label": "Your business", "detail": "Receive THB, USD, or local currency" }
-    ]
-  },
-  "howItWorks": {
-    "title": "How it works",
-    "subtitle": "From invoice to payout in minutes",
-    "steps": [
       {
-        "step": "01",
-        "title": "Create an invoice",
-        "description": "Set the amount in your currency. Asiru generates a payment link or QR code instantly."
-      },
-      {
-        "step": "02",
-        "title": "Client pays in rubles",
-        "description": "Your customer pays in RUB through their Russian bank app — fast, familiar, secure."
-      },
-      {
-        "step": "03",
-        "title": "You receive settlement",
-        "description": "Funds convert and settle to your account in THB, USD, or local currency — on schedule."
-      },
-      {
-        "step": "04",
-        "title": "Full transparency",
-        "description": "Track every transaction in your dashboard. Export reports for accounting and compliance."
+        "label": "Your business",
+        "detail": "Receive THB, USD, or local currency"
       }
     ]
   },
+  "howItWorks": {
+    "title": "How the",
+    "titleAccent": "deal works",
+    "subtitleLines": [
+      "One coordinator. One process.",
+      "Full control of the transaction."
+    ],
+    "stakeholders": [
+      { "label": "Buyer" },
+      { "label": "Developer / Real estate agency" }
+    ],
+    "hub": "ASIRU",
+    "partners": [
+      {
+        "title": "Russian bank",
+        "description": "Buyer fund protection through banking mechanisms (letter of credit)"
+      },
+      {
+        "title": "Payment partner",
+        "description": "International settlements between Russia and Thailand"
+      },
+      {
+        "title": "Legal partner",
+        "description": "Legal support and document review through property registration"
+      }
+    ],
+    "outcome": "Deal registration",
+    "summary": "ASIRU coordinates all parties in the transaction. Buyer funds are placed in a letter of credit with a Russian bank, and once deal conditions are met, the bank settles with the payment partner."
+  },
+  "whyPartners": {
+    "title": "Why partners choose ASIRU",
+    "benefits": [
+      {
+        "title": "More closed deals",
+        "description": "We help Russian buyers pay for property safely and securely."
+      },
+      {
+        "title": "Higher client trust",
+        "description": "The financial and legal structure of the deal becomes clear and transparent."
+      },
+      {
+        "title": "Less operational load",
+        "description": "We coordinate settlements and interaction between all parties in the deal."
+      },
+      {
+        "title": "International settlements",
+        "description": "We arrange settlements between Russia and Thailand."
+      },
+      {
+        "title": "Legal security",
+        "description": "Transaction support all the way through property registration."
+      },
+      {
+        "title": "Competitive settlement terms",
+        "description": "We minimize client costs on international currency conversion."
+      }
+    ],
+    "quote": "You sell the property. We make the international deal simple and secure."
+  },
   "caseStudies": {
     "title": "Real deals, real outcomes",
-    "subtitle": "How businesses across Southeast Asia close cross-border payments with Russian clients — in hours, not weeks.",
+    "subtitle": "How businesses across Southeast Asia close cross-border payments with Russian clients - in hours, not weeks.",
     "problemLabel": "Challenge",
     "solutionLabel": "How Asiru helped",
     "resultLabel": "Outcome",
@@ -188,7 +244,7 @@
         "category": "Hospitality",
         "title": "Luxury villa deposit from Moscow",
         "problem": "A Phuket resort needed a ฿850,000 booking deposit from a Russian guest. International cards failed and P2P transfers were rejected by compliance.",
-        "solution": "Asiru issued a QR invoice in minutes. The guest paid in rubles via SBP from their Russian banking app — no cards, no informal channels.",
+        "solution": "Asiru issued a QR invoice in minutes. The guest paid in rubles via SBP from their Russian banking app - no cards, no informal channels.",
         "result": "Deposit settled to the resort's Thai account the same evening. The booking was confirmed without losing the peak-season slot.",
         "metric": "4h",
         "metricLabel": "Booking secured"
@@ -235,19 +291,37 @@
   },
   "audience": {
     "title": "Built for businesses with Russian clients",
-    "subtitle": "If your guests, buyers, or partners want to pay in rubles — Asiru makes it effortless.",
+    "subtitle": "If your guests, buyers, or partners want to pay in rubles - Asiru makes it effortless.",
     "segments": [
-      { "title": "Hotels & hospitality", "description": "Deposits, bookings, and on-property payments" },
-      { "title": "Real estate", "description": "Property purchases, rentals, and agency fees" },
-      { "title": "Restaurants & retail", "description": "QR payments without POS hardware" },
-      { "title": "Medical & wellness", "description": "Treatment packages and clinic services" },
-      { "title": "Auto & transport", "description": "Rentals, transfers, and deposits" },
-      { "title": "Travel & experiences", "description": "Tours, excursions, and concierge services" }
+      {
+        "title": "Hotels & hospitality",
+        "description": "Deposits, bookings, and on-property payments"
+      },
+      {
+        "title": "Real estate",
+        "description": "Property purchases, rentals, and agency fees"
+      },
+      {
+        "title": "Restaurants & retail",
+        "description": "QR payments without POS hardware"
+      },
+      {
+        "title": "Medical & wellness",
+        "description": "Treatment packages and clinic services"
+      },
+      {
+        "title": "Auto & transport",
+        "description": "Rentals, transfers, and deposits"
+      },
+      {
+        "title": "Travel & experiences",
+        "description": "Tours, excursions, and concierge services"
+      }
     ]
   },
   "features": {
     "title": "Why businesses choose Asiru",
-    "subtitle": "Everything you need to accept rubles — without the operational headache.",
+    "subtitle": "Everything you need to accept rubles - without the operational headache.",
     "items": [
       {
         "title": "No POS required",
@@ -259,7 +333,7 @@
       },
       {
         "title": "Fast settlement",
-        "description": "From payment to payout in minutes — not days of bank clearing."
+        "description": "From payment to payout in minutes - not days of bank clearing."
       },
       {
         "title": "Business dashboard",
@@ -277,7 +351,7 @@
   },
   "about": {
     "title": "More than a payment agent",
-    "description": "Asiru is an international fintech team building regulated payment infrastructure between Russia and Southeast Asia. We operate within legal frameworks, with licensed partners and transparent processes — so your business can grow without payment friction.",
+    "description": "Asiru is an international fintech team building regulated payment infrastructure between Russia and Southeast Asia. We operate within legal frameworks, with licensed partners and transparent processes - so your business can grow without payment friction.",
     "highlights": [
       "Proprietary payment architecture",
       "Financial licenses across jurisdictions",
@@ -294,7 +368,7 @@
       },
       {
         "question": "How does the client pay?",
-        "answer": "Clients scan a QR code or open a payment link in their Russian banking app. Payment goes through regulated bank channels — no cards or informal transfers required."
+        "answer": "Clients scan a QR code or open a payment link in their Russian banking app. Payment goes through regulated bank channels - no cards or informal transfers required."
       },
       {
         "question": "What currency do I receive?",
@@ -310,9 +384,15 @@
       },
       {
         "question": "Who is Asiru for?",
-        "answer": "Any business in Thailand or Southeast Asia that serves Russian clients — hospitality, real estate, retail, medical, travel, and more."
+        "answer": "Any business in Thailand or Southeast Asia that serves Russian clients - hospitality, real estate, retail, medical, travel, and more."
       }
     ]
+  },
+  "becomePartner": {
+    "title": "Become a partner",
+    "subtitle": "Grow international sales together with ASIRU",
+    "description": "We invite developers and real estate agencies who need a reliable mechanism for international settlements and transaction support.",
+    "cta": "Discuss partnership"
   },
   "cta": {
     "title": "Start accepting rubles tomorrow",

@@ -15,28 +15,19 @@ type FAQSectionProps = {
   locale: Locale;
 };
 
-export function FAQSection({ dict, locale }: FAQSectionProps) {
+export function FAQSection({ dict }: FAQSectionProps) {
   const prefersReducedMotion = useReducedMotion();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
-  const useDisplayFont = locale === "en";
   const count = dict.faq.items.length;
 
   if (isDesktop === true && !prefersReducedMotion && count > 1) {
-    return (
-      <FAQScrollDesktop dict={dict} useDisplayFont={useDisplayFont} />
-    );
+    return <FAQScrollDesktop dict={dict} />;
   }
 
-  return <FAQAccordion dict={dict} useDisplayFont={useDisplayFont} />;
+  return <FAQAccordion dict={dict} />;
 }
 
-function FAQScrollDesktop({
-  dict,
-  useDisplayFont,
-}: {
-  dict: Dictionary;
-  useDisplayFont: boolean;
-}) {
+function FAQScrollDesktop({ dict }: { dict: Dictionary }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const count = dict.faq.items.length;
   const { activeIndex, direction, segmentProgress } = useScrollSlideIndex(
@@ -46,20 +37,16 @@ function FAQScrollDesktop({
   const item = dict.faq.items[activeIndex];
 
   return (
-    <section className="border-t border-border bg-background">
+    <section className="relative border-t border-border bg-muted">
+      <div className="grain-overlay" />
       <div ref={containerRef} style={{ height: `${count * 70}vh` }}>
         <div className="sticky top-0 flex min-h-screen flex-col justify-center py-28">
           <div className="mx-auto w-full max-w-3xl px-6">
-            <FadeIn className="text-center">
-              <h2
-                className={`text-3xl tracking-tight md:text-5xl ${
-                  useDisplayFont
-                    ? "font-display font-normal"
-                    : "font-sans font-bold"
-                }`}
-              >
+            <FadeIn className="flex flex-col items-center text-center">
+              <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-[var(--brand-dark)] md:text-5xl">
                 {dict.faq.title}
               </h2>
+              <div className="gold-rule mt-6 w-14" />
             </FadeIn>
 
             <div className="mt-12">
@@ -68,12 +55,12 @@ function FAQScrollDesktop({
                 direction={direction}
                 className="min-h-[220px]"
               >
-                <div className="rounded-3xl border border-border bg-background p-8 shadow-sm md:p-10">
-                  <p className="font-mono-data text-[10px] uppercase tracking-widest text-primary">
+                <div className="surface-card rounded-3xl p-8 md:p-10">
+                  <p className="font-mono-data text-[10px] uppercase tracking-widest text-gold">
                     {String(activeIndex + 1).padStart(2, "0")} /{" "}
                     {String(count).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-4 text-xl font-semibold md:text-2xl">
+                  <h3 className="mt-4 font-display text-xl font-medium text-[var(--brand-dark)] md:text-2xl">
                     {item.question}
                   </h3>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -97,26 +84,18 @@ function FAQScrollDesktop({
   );
 }
 
-function FAQAccordion({
-  dict,
-  useDisplayFont,
-}: {
-  dict: Dictionary;
-  useDisplayFont: boolean;
-}) {
+function FAQAccordion({ dict }: { dict: Dictionary }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="border-t border-border bg-background py-28">
-      <div className="mx-auto max-w-3xl px-6">
-        <FadeIn className="text-center">
-          <h2
-            className={`text-3xl tracking-tight md:text-5xl ${
-              useDisplayFont ? "font-display font-normal" : "font-sans font-bold"
-            }`}
-          >
+    <section className="relative border-t border-border bg-muted py-28">
+      <div className="grain-overlay" />
+      <div className="relative mx-auto max-w-3xl px-6">
+        <FadeIn className="flex flex-col items-center text-center">
+          <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-[var(--brand-dark)] md:text-5xl">
             {dict.faq.title}
           </h2>
+          <div className="gold-rule mt-6 w-14" />
         </FadeIn>
 
         <div className="mt-12 space-y-3">
@@ -125,17 +104,17 @@ function FAQAccordion({
 
             return (
               <FadeIn key={item.question} delay={i * 0.05}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
+                <div className="surface-card overflow-hidden rounded-2xl">
                   <button
                     type="button"
                     className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                     aria-expanded={isOpen}
                   >
-                    <span className="font-medium">{item.question}</span>
+                    <span className="font-medium text-[var(--brand-dark)]">{item.question}</span>
                     <ChevronDown
                       size={18}
-                      className={`shrink-0 text-muted-foreground transition-transform duration-300 ${
+                      className={`shrink-0 text-gold transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />

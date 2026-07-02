@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -28,11 +29,8 @@ export function Header({ dict, locale }: HeaderProps) {
   }, []);
 
   const links = [
-    { href: "#product", label: dict.nav.product },
     { href: "#how-it-works", label: dict.nav.howItWorks },
-    { href: "#for-business", label: dict.nav.forBusiness },
-    { href: "#cases", label: dict.nav.cases },
-    { href: "#calculator", label: dict.nav.calculator },
+    { href: "#why", label: dict.nav.whyAsiru },
     { href: "#faq", label: dict.nav.faq },
   ];
 
@@ -46,20 +44,25 @@ export function Header({ dict, locale }: HeaderProps) {
         >
           <Link
             href={getLocalizedPath("home", locale)}
-            className="flex items-center gap-2 text-lg font-semibold tracking-tight"
+            className="flex items-center"
+            aria-label="Asiru"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow-sm">
-              A
-            </span>
-            Asiru
+            <Image
+              src="/logo.png"
+              alt="Asiru"
+              width={900}
+              height={209}
+              priority
+              className="h-7 w-auto"
+            />
           </Link>
 
-          <div className="hidden items-center gap-6 xl:flex">
+          <div className="hidden items-center gap-8 xl:flex">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="relative text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:text-[var(--brand-dark)] hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -70,7 +73,7 @@ export function Header({ dict, locale }: HeaderProps) {
             <LocaleSwitcher currentLocale={locale} />
             <a
               href="#contact"
-              className="cursor-pointer rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-hover hover:shadow-[0_8px_24px_var(--primary-glow)]"
+              className="btn-premium cursor-pointer rounded-full px-5 py-2.5 text-sm font-medium"
             >
               {dict.nav.cta}
             </a>
@@ -108,7 +111,7 @@ export function Header({ dict, locale }: HeaderProps) {
                 <LocaleSwitcher currentLocale={locale} />
                 <a
                   href="#contact"
-                  className="rounded-full bg-primary px-5 py-2.5 text-center text-sm font-medium text-white"
+                  className="btn-premium rounded-full px-5 py-2.5 text-center text-sm font-medium"
                   onClick={() => setOpen(false)}
                 >
                   {dict.nav.cta}
@@ -135,8 +138,8 @@ function LocaleSwitcher({ currentLocale }: { currentLocale: Locale }) {
           }
           className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium uppercase transition-colors ${
             loc === currentLocale
-              ? "bg-primary text-white"
-              : "text-muted-foreground hover:text-foreground"
+              ? "bg-[var(--brand-dark)] text-white"
+              : "text-muted-foreground hover:text-[var(--brand-dark)]"
           }`}
         >
           {loc}

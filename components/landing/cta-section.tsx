@@ -15,38 +15,40 @@ export function CTASection({ dict }: CTASectionProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="bg-background py-28">
+    <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn>
           <motion.div
-            className="relative overflow-hidden rounded-3xl border border-border bg-primary-light p-10 md:p-16"
+            className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[var(--brand-dark)] to-[#1c2a54] p-10 shadow-[0_30px_80px_rgba(19,28,58,0.3)] md:p-16"
             whileHover={prefersReducedMotion ? undefined : { scale: 1.005 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-[80px]" />
-            <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/60 blur-[80px]" />
+            <div className="grain-overlay opacity-30" />
+            <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[var(--gold-glow)] blur-[90px]" />
+            <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary/20 blur-[90px]" />
 
-            <div className="relative mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-5xl">
+            <div className="relative mx-auto flex max-w-2xl flex-col items-center text-center">
+              <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-white md:text-5xl">
                 {dict.cta.title}
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <div className="gold-rule mt-6 w-14" />
+              <p className="mt-6 text-lg text-white/70">
                 {dict.cta.subtitle}
               </p>
 
               <form
-                className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center"
+                className="mt-10 flex w-full flex-col gap-3 sm:flex-row sm:justify-center"
                 onSubmit={(e) => e.preventDefault()}
               >
                 <input
                   type="email"
                   placeholder={dict.cta.emailPlaceholder}
-                  className="rounded-full border border-border bg-background px-6 py-3.5 text-sm text-foreground shadow-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  className="rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-white/50 outline-none backdrop-blur-sm transition-colors focus:border-[var(--gold-soft)] focus:ring-2 focus:ring-[var(--gold-glow)] sm:min-w-[280px]"
                   aria-label={dict.cta.emailPlaceholder}
                 />
                 <button
                   type="submit"
-                  className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-primary-hover hover:shadow-[0_8px_24px_var(--primary-glow)]"
+                  className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-medium text-[var(--brand-dark)] transition-all hover:shadow-[0_12px_32px_rgba(255,255,255,0.25)]"
                 >
                   {dict.cta.button}
                   <ArrowRight
@@ -56,7 +58,7 @@ export function CTASection({ dict }: CTASectionProps) {
                 </button>
               </form>
 
-              <p className="mt-4 text-xs text-muted-foreground">
+              <p className="mt-4 text-xs text-white/50">
                 {dict.cta.note}
               </p>
             </div>
