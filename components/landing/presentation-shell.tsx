@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import type { Locale } from "@/lib/i18n/routes";
 import { PresentationProvider, usePresentation } from "./presentation-context";
 import { ScrollProgressRail } from "./scroll-progress-rail";
-import { StickyCta } from "./sticky-cta";
+// import { StickyCta } from "./sticky-cta";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 
 type PresentationShellProps = {
@@ -22,7 +22,7 @@ export function PresentationShell({
     <PresentationProvider locale={locale}>
       <TopScrollBar />
       <ScrollProgressRail />
-      <StickyCta dict={dict} />
+      {/* <StickyCta dict={dict} /> */}
       {children}
     </PresentationProvider>
   );

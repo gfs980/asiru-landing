@@ -113,7 +113,7 @@ export function Hero({ dict }: HeroProps) {
             initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.3 }}
-            className="mt-11 flex justify-center"
+            className="mt-11 flex justify-center lg:justify-start"
           >
             <a
               href="#contact"
