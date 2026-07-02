@@ -32,7 +32,7 @@ export function DealFlowSection({ dict }: DealFlowSectionProps) {
       <section className="relative overflow-hidden bg-muted py-24 md:py-32">
         <div className="grain-overlay" />
         <div className="relative mx-auto max-w-7xl px-6">
-          <header className="max-w-2xl">
+          <header className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <h2 className="font-display text-[clamp(2rem,4.4vw,3.4rem)] font-medium leading-[1.05] tracking-[-0.02em] text-[var(--brand-dark)]">
               {section.title}
               <br />
