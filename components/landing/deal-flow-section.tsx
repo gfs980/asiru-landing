@@ -72,7 +72,7 @@ export function DealFlowSection({ dict }: DealFlowSectionProps) {
 
               <BranchConnector count={section.partners.length} />
 
-              <div className="grid gap-8 md:grid-cols-3 md:gap-0 md:divide-x md:divide-border">
+              <div className="mt-10 grid gap-8 md:mt-0 md:grid-cols-3 md:gap-0 md:divide-x md:divide-border">
                 {section.partners.map((partner, index) => {
                   const Icon = partnerIcons[index] ?? ShieldCheck;
 

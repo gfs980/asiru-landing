@@ -22,7 +22,7 @@ export function BecomePartnerSection({
       <div className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden w-[62vw] md:block">
         <div className="relative h-full min-h-[640px]">
           <Image
-            src="/images/villa-hero.webp"
+            src="/images/villa.jpg"
             alt=""
             fill
             sizes="62vw"

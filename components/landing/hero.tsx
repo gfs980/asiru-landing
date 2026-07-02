@@ -32,10 +32,24 @@ export function Hero({ dict }: HeroProps) {
     <section className="relative min-h-svh overflow-hidden bg-white">
       <div className="grain-overlay z-0" />
 
+      {/* Mobile: full-screen villa background */}
+      <div className="absolute inset-0 z-0 lg:hidden">
+        <Image
+          src="/images/villa.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-white/45" />
+      </div>
+
+      {/* Desktop: side villa background */}
       <div className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden w-[min(52vw,780px)] lg:block">
         <div className="relative h-full min-h-svh">
           <Image
-            src="/images/villa-hero.webp"
+            src="/images/villa.jpg"
             alt=""
             fill
             priority
@@ -46,7 +60,7 @@ export function Hero({ dict }: HeroProps) {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-svh max-w-7xl items-center px-6 py-28 md:py-32">
+      <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-7xl items-center px-6 py-28 lg:items-center lg:py-32">
         <div className="max-w-2xl lg:max-w-[46%] xl:max-w-2xl">
           <motion.h1
             initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
@@ -99,32 +113,15 @@ export function Hero({ dict }: HeroProps) {
             initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.3 }}
-            className="mt-11"
+            className="mt-11 flex justify-center"
           >
             <a
               href="#contact"
               className="btn-premium group inline-flex cursor-pointer items-center gap-2.5 rounded-full px-8 py-4 text-sm font-medium"
             >
               {dict.hero.ctaPrimary}
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
             </a>
           </motion.div>
-        </div>
-      </div>
-
-      <div className="relative mx-auto mt-2 h-56 overflow-hidden px-6 pb-10 lg:hidden">
-        <div className="relative h-full w-full overflow-hidden rounded-2xl">
-          <Image
-            src="/images/villa-hero.webp"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/55 to-white/20" />
         </div>
       </div>
     </section>
