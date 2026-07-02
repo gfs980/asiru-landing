@@ -120,6 +120,10 @@ export function Hero({ dict }: HeroProps) {
               className="btn-premium group inline-flex cursor-pointer items-center gap-2.5 rounded-full px-8 py-4 text-sm font-medium"
             >
               {dict.hero.ctaPrimary}
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </a>
           </motion.div>
         </div>
