@@ -93,6 +93,15 @@ export function middleware(request: NextRequest) {
     return handleHomeLocale(request, pathname);
   }
 
+  // RU-only strategic presentation
+  if (pathname === "/preza-token" || pathname === "/preza-token/") {
+    return redirectWithLocale(request, "/ru/preza-token", "ru");
+  }
+
+  if (pathname.startsWith("/en/preza-token")) {
+    return new NextResponse(null, { status: 404 });
+  }
+
   return NextResponse.next();
 }
 

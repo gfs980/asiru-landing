@@ -361,3 +361,36 @@ h3 {
     animation: none;
   }
 }
+
+/* A7A5 strategic presentation deck */
+.preza-deck {
+  min-height: 100svh;
+  background: var(--muted);
+}
+
+html:has(.preza-deck) {
+  scroll-snap-type: y mandatory;
+}
+
+.preza-main {
+  position: relative;
+}
+
+.preza-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.preza-slide-dark {
+  color: #fff;
+}
+
+.preza-slide-light {
+  background: var(--background);
+}
+
+.preza-header,
+.preza-footer {
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+}
